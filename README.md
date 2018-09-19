@@ -6,7 +6,7 @@ Deep Retinex Decomposition for Low-Light Enhancement. In BMVC'18 (Oral Presentat
 
 [Paper](https://arxiv.org/abs/1808.04560), [Project Page & Dataset](https://daooshee.github.io/BMVC2018website/)
 
-<img src="figs/results.pdf" width="800px"/>
+<img src="figs/results.png" width="800px"/>
 
 ### Requirements ###
 1. Python
