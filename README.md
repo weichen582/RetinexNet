@@ -1,5 +1,5 @@
 # RetinexNet
-This is a Tensorflow implantation of RetinexNet
+This is a Tensorflow implement of RetinexNet
 
 Deep Retinex Decomposition for Low-Light Enhancement. In BMVC'18 (Oral Presentation)<br>
 [Chen Wei*](https://weichen582.github.io/), [Wenjing Wang*](https://daooshee.github.io/website/), [Wenhan Yang](https://flyywh.github.io/), [Jiaying Liu](http://www.icst.pku.edu.cn/struct/people/liujiaying.html). (* indicates equal contributions)<br>
