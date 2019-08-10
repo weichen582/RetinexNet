@@ -194,7 +194,7 @@ class lowlight_enhance(object):
                 iter_num += 1
 
             # evalutate the model and save a checkpoint file for it
-            if (epoch + 1) % eval_every_epoch == 0:
+            if (epoch + 1) % int(eval_every_epoch) == 0:
                 self.evaluate(epoch + 1, eval_low_data, sample_dir=sample_dir, train_phase=train_phase)
                 self.save(saver, iter_num, ckpt_dir, "RetinexNet-%s" % train_phase)
 
