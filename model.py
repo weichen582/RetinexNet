@@ -10,8 +10,10 @@ import numpy as np
 
 from utils import *
 
+
 def concat(layers):
     return tf.concat(layers, axis=3)
+
 
 def DecomNet(input_im, layer_num, channel=64, kernel_size=3):
     input_max = tf.reduce_max(input_im, axis=3, keepdims=True)
@@ -26,6 +28,7 @@ def DecomNet(input_im, layer_num, channel=64, kernel_size=3):
     L = tf.sigmoid(conv[:,:,:,3:4])
 
     return R, L
+
 
 def RelightNet(input_L, input_R, channel=64, kernel_size=3):
     input_im = concat([input_R, input_L])
@@ -48,6 +51,7 @@ def RelightNet(input_L, input_R, channel=64, kernel_size=3):
         feature_fusion = tf.layers.conv2d(feature_gather, channel, 1, padding='same', activation=None)
         output = tf.layers.conv2d(feature_fusion, 1, 3, padding='same', activation=None)
     return output
+
 
 class lowlight_enhance(object):
     def __init__(self, sess):
@@ -194,7 +198,7 @@ class lowlight_enhance(object):
                 iter_num += 1
 
             # evalutate the model and save a checkpoint file for it
-            if (epoch + 1) % eval_every_epoch == 0:
+            if (epoch + 1) % int(eval_every_epoch) == 0:
                 self.evaluate(epoch + 1, eval_low_data, sample_dir=sample_dir, train_phase=train_phase)
                 self.save(saver, iter_num, ckpt_dir, "RetinexNet-%s" % train_phase)
 
