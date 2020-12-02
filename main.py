@@ -20,7 +20,7 @@ parser.add_argument('--epoch', dest='epoch', type=int, default=100, help='number
 parser.add_argument('--batch_size', dest='batch_size', type=int, default=16, help='number of samples in one batch')
 parser.add_argument('--patch_size', dest='patch_size', type=int, default=48, help='patch size')
 parser.add_argument('--start_lr', dest='start_lr', type=float, default=0.001, help='initial learning rate for adam')
-parser.add_argument('--eval_every_epoch', dest='eval_every_epoch', default=20, help='evaluating and saving checkpoints every #  epoch')
+parser.add_argument('--eval_every_epoch', dest='eval_every_epoch', type=int, default=20, help='evaluating and saving checkpoints every #  epoch')
 parser.add_argument('--checkpoint_dir', dest='ckpt_dir', default='./checkpoint', help='directory for checkpoints')
 parser.add_argument('--sample_dir', dest='sample_dir', default='./sample', help='directory for evaluating outputs')
 
